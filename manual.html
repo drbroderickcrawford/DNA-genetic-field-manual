@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Father-to-Sons Genetic Field Manual</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      max-width: 900px;
+    }
+    h1, h2, h3 {
+      color: #003366;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .closing {
+      font-weight: bold;
+      font-style: italic;
+      color: #660000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Father-to-Sons Genetic Field Manual</h1>
+  <p><strong>A Genomic Mission Log from Dr. Broderick Crawford</strong></p>
+  <p><em>“Your genes are tools. You are the craftsman.”</em></p>
+
+  <div class="section">
+    <h2>Cover Orders</h2>
+    <p><strong>Author:</strong> Dr. Broderick Crawford</p>
+    <p><strong>Unit:</strong> USMC Veteran, Father, Researcher</p>
+    <p><strong>Location:</strong> California</p>
+  </div>
+
+  <div class="section">
+    <h2>Mission 1: Reconnaissance (Pipeline Setup)</h2>
+    <ul>
+      <li>Downloaded AncestryDNA raw text.</li>
+      <li>Cleaned malformed lines (<code>awk</code>, <code>sed</code>).</li>
+      <li>Converted to PLINK (.bed/.bim/.fam) then to VCF (.vcf.gz) aligned to hg19.</li>
+      <li>Indexed with tabix.</li>
+      <li>Queried SNPs with <code>zgrep</code> across disease and trait panels.</li>
+    </ul>
+    <p><strong>Files saved:</strong> ancestry.log, ancestry_hg19.log, pipeline.sh, command_history.txt</p>
+  </div>
+
+  <div class="section">
+    <h2>Mission 2: Systems Check (SNP Tables)</h2>
+    <p>Summarized results across categories (neuro, oncology, psychiatric, metabolism, cardiovascular, respiratory, renal, development, hematology, traits).</p>
+    <ul>
+      <li><strong>Neuro:</strong> Standard Alzheimer’s risk; lifestyle most important.</li>
+      <li><strong>Oncology:</strong> No BRCA mutations; slight glioma nudge (TERT, CDKN2A/B).</li>
+      <li><strong>Psychiatric:</strong> BDNF protective; COMT Val/Val = stress sensitivity; CACNA1C heterozygous = minor mood susceptibility.</li>
+      <li><strong>Pharmacogenomics:</strong> Normal metabolizer, no red flags.</li>
+      <li><strong>Metabolic:</strong> No elevated obesity/diabetes risk.</li>
+      <li><strong>Cardiovascular:</strong> rs1333049 heterozygous = mild CAD risk.</li>
+      <li><strong>Respiratory:</strong> No COPD predisposition; minor lung cancer SNP nudges.</li>
+      <li><strong>Renal:</strong> No CKD/APOL1 risk.</li>
+      <li><strong>Neurodevelopment:</strong> Some RELN variation (learning flexibility); ADHD markers weak.</li>
+      <li><strong>Hematology:</strong> Sickle cell trait carrier.</li>
+      <li><strong>Traits:</strong> Brown baseline eyes, dark hair, average-to-tall, good longevity genes.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Mission 3: Top 3 Risk Nudges</h2>
+    <ol>
+      <li><strong>Stress Reactivity:</strong> COMT + CACNA1C → pressure felt quicker, resilience via structure.</li>
+      <li><strong>Glioma Risk:</strong> Slight neuro-oncology SNP nudges, not deterministic.</li>
+      <li><strong>Sickle Cell Trait:</strong> Carrier status, important for sons’ inheritance.</li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>Mission 4: Tactical Guidance for Sons</h2>
+    <ul>
+      <li><strong>On Stress:</strong> Recognize emotional intensity; use training to turn stress into strength.</li>
+      <li><strong>On Health:</strong> Monitor brain health, heart, and regular checkups.</li>
+      <li><strong>On Legacy:</strong> You may inherit resilience (BDNF), stress sensitivity (COMT/CACNA1C), or sickle cell trait. Use this knowledge wisely.</li>
+    </ul>
+  </div>
+
+  <div class="closing">
+    <p>“Boys, your DNA is a blueprint, not a battle plan. You decide the mission. <br>Semper Fidelis.”</p>
+  </div>
+
+  <p><a href="index.html">⬅ Back to Home</a></p>
+</body>
+</html>
