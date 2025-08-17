@@ -3,123 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Father-to-Sons Genetic Field Manual</title>
+  <title>Genetic Field Manual - Full Report</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-      max-width: 900px;
+      font-family: "Trebuchet MS", sans-serif;
+      background-color: #111;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #800000;
+      color: gold;
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 4px solid gold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
     h1, h2, h3 {
-      color: #2c3e50;
+      color: gold;
+      margin-top: 2rem;
     }
-    h1 {
-      text-align: center;
-      border-bottom: 2px solid #333;
-      padding-bottom: 10px;
-    }
-    .section {
-      margin-bottom: 30px;
-    }
-    .mission {
-      background: #f4f4f4;
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 20px;
+    section {
+      padding: 1.5rem;
+      border-bottom: 1px solid #333;
     }
     table {
-      border-collapse: collapse;
       width: 100%;
-      margin-bottom: 20px;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      background: #222;
     }
     th, td {
-      border: 1px solid #ccc;
-      padding: 8px;
-      text-align: left;
+      border: 1px solid #444;
+      padding: 0.5rem;
+      text-align: center;
     }
     th {
-      background: #eee;
+      background: #800000;
+      color: gold;
+      text-transform: uppercase;
     }
-    .closing {
-      font-style: italic;
+    td {
+      color: #f5f5f5;
+    }
+    footer {
+      margin-top: 3rem;
       text-align: center;
-      margin-top: 40px;
+      padding: 1rem;
+      background: #222;
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+    .motto {
+      font-style: italic;
+      color: #ffd700;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
-  <h1>Father-to-Sons Genetic Field Manual</h1>
-  <p><strong>A Genomic Mission Log from Dr. Broderick Crawford</strong></p>
-  <p><strong>Unit:</strong> USMC Veteran, Father, Researcher<br>
-     <strong>Location:</strong> California<br>
-     <strong>Mission Motto:</strong> “Your genes are tools. You are the craftsman.”</p>
+  <header>
+    <h1>Father-to-Sons Genetic Field Manual</h1>
+    <p>Genomic Mission Log — Dr. Broderick Crawford</p>
+  </header>
 
-  <div class="section mission">
+  <section>
+    <h2>Cover Orders</h2>
+    <p><strong>Author:</strong> Dr. Broderick Crawford</p>
+    <p><strong>Unit:</strong> USMC Veteran, Father, Researcher</p>
+    <p><strong>Mission Motto:</strong> “Your genes are tools. You are the craftsman.”</p>
+  </section>
+
+  <section>
     <h2>Mission 1: Reconnaissance (Pipeline Setup)</h2>
-    <p><strong>Objective:</strong> Extract, clean, and analyze Crawford family DNA for health and trait intel.</p>
     <ul>
       <li>Downloaded AncestryDNA raw text.</li>
       <li>Cleaned malformed lines (awk, sed).</li>
-      <li>Converted to PLINK (.bed/.bim/.fam) then to VCF (.vcf.gz) aligned to hg19.</li>
-      <li>Indexed with tabix.</li>
-      <li>Queried SNPs with zgrep across disease and trait panels.</li>
+      <li>Converted to PLINK → VCF (hg19 aligned).</li>
+      <li>Indexed with tabix; queried SNPs with zgrep.</li>
+      <li>Logs and scripts archived for reproducibility.</li>
     </ul>
-    <p><strong>Files saved:</strong> ancestry.log, ancestry_hg19.log, pipeline.sh, command_history.txt</p>
-  </div>
+  </section>
 
-  <div class="section mission">
+  <section>
     <h2>Mission 2: Systems Check (SNP Tables)</h2>
-
     <h3>🧠 Neurodegeneration</h3>
     <table>
       <tr><th>Gene</th><th>SNP</th><th>Result</th><th>Meaning</th></tr>
       <tr><td>APOE</td><td>rs429358, rs7412</td><td>ε3/ε3</td><td>Neutral Alzheimer’s risk</td></tr>
-      <tr><td>CLU, BIN1, PICALM</td><td>Multiple</td><td>Wild type</td><td>No unusual risk alleles</td></tr>
+      <tr><td>CLU, BIN1, PICALM</td><td>—</td><td>Wild type</td><td>No unusual risk alleles</td></tr>
     </table>
     <p><em>Interpretation:</em> Standard age-related risk; lifestyle dominates outcome.</p>
+  </section>
 
-    <h3>🎗 Oncology</h3>
-    <table>
-      <tr><th>Gene</th><th>SNP</th><th>Result</th><th>Meaning</th></tr>
-      <tr><td>BRCA1/2</td><td>rs80338939, rs80359550</td><td>0/0</td><td>No high-risk mutations</td></tr>
-      <tr><td>TERT</td><td>rs2736100</td><td>0/1</td><td>Small glioma risk nudge</td></tr>
-      <tr><td>CDKN2A/B</td><td>rs4977756</td><td>0/1</td><td>Minor population risk</td></tr>
-    </table>
-    <p><em>Interpretation:</em> Not diagnostic; family history and screening more important.</p>
-
-    <h3>⚡ Psychiatric / Cognitive</h3>
-    <table>
-      <tr><th>Gene</th><th>SNP</th><th>Result</th><th>Meaning</th></tr>
-      <tr><td>BDNF</td><td>rs6265</td><td>0/0</td><td>Protective; resilience</td></tr>
-      <tr><td>CACNA1C</td><td>rs1006737</td><td>0/1</td><td>Slight mood disorder risk</td></tr>
-      <tr><td>COMT</td><td>rs4680</td><td>Val/Val</td><td>Fast dopamine breakdown → stress sensitivity</td></tr>
-    </table>
-    <p><em>Interpretation:</em> You feel stress faster but adapt well with structure.</p>
-
-    <!-- You can continue tables for Pharmacogenomics, Metabolic, Cardiovascular, Respiratory, Renal, Neurodevelopment, Hematology, Traits, etc. as we drafted. -->
-  </div>
-
-  <div class="section mission">
+  <section>
     <h2>Mission 3: Top 3 Risk Nudges</h2>
     <ol>
-      <li><strong>Stress Reactivity (COMT + CACNA1C):</strong> You feel pressure quicker; structure converts it into resilience.</li>
-      <li><strong>Glioma / Neuro-oncology nudges:</strong> Slight risk in brain tumor SNPs, not deterministic.</li>
-      <li><strong>Sickle Cell Trait:</strong> Carrier status, important for sons’ inheritance.</li>
+      <li><strong>Stress Reactivity (COMT + CACNA1C):</strong> Pressure felt faster; structure = resilience.</li>
+      <li><strong>Glioma / Neuro-oncology nudges:</strong> Slight tumor SNP risk, not deterministic.</li>
+      <li><strong>Sickle Cell Trait:</strong> Carrier status; inheritance relevant for sons.</li>
     </ol>
-  </div>
+  </section>
 
-  <div class="section mission">
+  <section>
     <h2>Mission 4: Tactical Guidance for Sons</h2>
     <ul>
-      <li><strong>On Stress:</strong> Recognize emotional intensity; build resilience through training.</li>
-      <li><strong>On Health:</strong> Watch brain health, cardiovascular monitoring, and screenings.</li>
-      <li><strong>On Legacy:</strong> You may inherit resilience (BDNF), stress sensitivity (COMT/CACNA1C), and possibly sickle cell trait.</li>
+      <li><strong>Stress:</strong> Recognize intensity; channel through discipline/training.</li>
+      <li><strong>Health:</strong> Monitor brain, cardiovascular health; use proactive screening.</li>
+      <li><strong>Legacy:</strong> Likely inheritance of resilience (BDNF), stress sensitivity (COMT/CACNA1C), and possibly sickle cell trait.</li>
     </ul>
-  </div>
+  </section>
 
-  <p class="closing">“Boys, your DNA is a blueprint, not a battle plan. You decide the mission. Semper Fidelis.”</p>
+  <footer>
+    <p class="motto">“Boys, your DNA is a blueprint, not a battle plan. You decide the mission. Semper Fidelis.”</p>
+  </footer>
 </body>
 </html>
-<<<<<<< HEAD
-
